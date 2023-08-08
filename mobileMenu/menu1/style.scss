@@ -1,0 +1,68 @@
+* {
+  font-family: 'DM Sans', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+
+  box-sizing: border-box;
+
+  &:focus {
+    box-shadow: unset !important;
+    outline: unset !important;
+  }
+}
+a {
+  color: #000;
+  text-decoration: none !important;
+  transition: 0.3s ease all;
+
+  &:hover {
+    color: #506f87;
+    text-decoration: none !important;
+  }
+}
+body {  font-family: 'DM Sans', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.demoContainer {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  height: 700px;
+  position: relative;
+  background: #b6ebff;
+
+
+}
+header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+padding: 20px 20px;
+  .openMenu {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon {
+      width: 35px;
+      height: 35px;
+    }
+  }
+}
+.mobileMenu {
+  .logo {
+    width: 100px;
+    height: 50px;
+    background: #fff;
+  }
+}
+@import "menu";

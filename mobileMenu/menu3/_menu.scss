@@ -1,0 +1,209 @@
+.mobileMenu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  width: 100vw;
+  background: #000;
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease transform, 0.3s 0.3s ease opacity;
+  transform: translateX(100%);
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+
+  &.active {
+    transform: translateX(0%);
+    opacity: 1;
+    pointer-events: auto;
+    transition: 0.3s 0.3s ease transform;
+
+    .wrapper {
+      transition: 0.3s 0.5s ease all;
+      transform: scale(1) translateX(0%);
+    }
+
+    .menu {
+      ul {
+        li {
+          a {
+            padding: 15px 0px;
+          }
+        }
+      }
+    }
+  }
+
+  .backButton {
+    position: absolute;
+    cursor: pointer;
+    top: 30px;
+    left: 40px;
+    z-index: 2;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d0d4dd;
+    opacity: 0;
+    pointer-events: none;
+    gap: 10px;
+
+    .icon {
+      margin-right: 5px;
+      width: 30px;
+      height: 25px;
+      fill: #fff;
+      transition: 0.3s ease all;
+    }
+
+    &.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  .closeBtn {
+    position: absolute;
+    cursor: pointer;
+    top: 28px;
+    right: 22px;
+    z-index: 2;
+
+    &:hover {
+      .icon {
+        fill: var(--black80);
+
+      }
+    }
+
+    .icon {
+      width: 30px;
+      height: 30px;
+      fill: #d0d4dd;
+      transition: 0.3s ease all;
+    }
+  }
+
+  .bottom {
+    .logo {
+      text-align: center;
+      margin-bottom: 30px;
+      display: block;
+    }
+    .languageSelection {
+      display: flex;
+      align-items: center;
+
+      gap: 20px;
+      justify-content: center;
+
+      a {
+        font-size: 17px;
+        font-weight: 600;
+        color: #fff;
+        display: block;
+
+        &.active {
+          color: #00AEFE;
+        }
+      }
+    }
+
+  }
+
+
+  .wrapper {
+
+    transform: scale(0.9) translateX(10%);
+    transition: 0.3s ease all;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex: 1;
+
+    .menu {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+
+      ul {
+        li {
+          a {
+            display: block;
+            padding: 10px 0;
+            font-size: 18px;
+            color: #fff;
+          }
+
+          .dropdown-menu {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .menu1 {
+      transition: 0.3s 0.3s ease all;
+      transform: translateY(-50%) translateX(0%) scale(1);
+
+      &.deactive {
+        transition: 0.3s ease all;
+        transform: translateY(-50%) translateX(-100%) scale(0.9);
+        pointer-events: none;
+
+      }
+    }
+
+    .menu2 {
+      .subTitle {
+        font-size: 25px;
+        font-weight: bold;
+        position: absolute;
+        color: #fff;
+        top: -50px;
+      }
+
+      transform: translateY(-50%) translateX(100%) scale(0.9);
+      pointer-events: none;
+      transition: 0.3s ease all;
+
+      &.active {
+        pointer-events: auto;
+        transition: 0.3s 0.3s ease all;
+        transform: translateY(-50%) translateX(0%) scale(1);
+      }
+    }
+
+
+  }
+}
+
+.mobileMenuBackdrop {
+  position: fixed;
+  left: 100%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 4;
+  background: #1d2938;
+  transition: 0.3s 0.3s ease left, 0.3s 0.3s ease opacity;
+  pointer-events: none;
+  opacity: 0;
+
+  &.active {
+    pointer-events: auto;
+    opacity: 0.68;
+    left: 0;
+    transition: 0.3s ease left;
+  }
+}
