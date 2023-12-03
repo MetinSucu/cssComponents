@@ -1,11 +1,72 @@
 .elements {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.elements .item {
+  position: relative;
+  width: 20%;
+  aspect-ratio: 3/2;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  text-align: center;
+  background-color: #2196f3;
 }
+.elements .item:nth-child(1) {
+  background-color: #2196f3;
+}
+.elements .item:nth-child(2) {
+  background-color: #4a148c;
+}
+.elements .item:nth-child(3) {
+  background-color: #4db6ac;
+}
+.elements .item:nth-child(4) {
+  background-color: #ff5722;
+}
+.elements .item:nth-child(5) {
+  background-color: #444;
+}
+.elements .item:nth-child(6) {
+  background-color: #ec407a;
+}
+.elements .item:nth-child(7) {
+  background-color: #fbc02d;
+}
+.elements .item:nth-child(8) {
+  background-color: #2196f3;
+}
+.elements .item:nth-child(9) {
+  background-color: #607d8b;
+}
+.elements .item:nth-child(10) {
+  background-color: #43a047;
+}
+.elements .item:nth-child(11) {
+  background-color: #3f51b5;
+}
+.elements .item:nth-child(12) {
+  background-color: #00bcd4;
+}
+.elements .item:nth-child(13) {
+  background-color: #f44336;
+}
+.elements .item:nth-child(14) {
+  background-color: #9c27b0;
+}
+.elements .item:nth-child(15) {
+  background-color: #795548;
+}
+.elements .item:nth-child(16) {
+  background-color: #ffc107;
+}
+.elements .item:nth-child(17) {
+  background-color: #03a9f4;
+}
+
 .hamburgerMenu1 {
   width: 30px;
   min-width: 30px;
@@ -17,7 +78,7 @@
   content: "";
   width: 13px;
   height: 13px;
-  border: 3.5px solid #000;
+  border: 3.5px solid #fff;
   border-radius: 8px;
   position: absolute;
   transition: 0.3s ease width, 0.3s ease height, 0.3s ease transform;
@@ -29,7 +90,7 @@
   content: "";
   width: 13px;
   height: 13px;
-  border: 3.5px solid #000;
+  border: 3.5px solid #fff;
   border-radius: 8px;
   position: absolute;
   transition: 0.3s ease width, 0.3s ease height, 0.3s ease transform;
@@ -57,21 +118,21 @@
   width: 100%;
   height: 7px;
   border: 0;
-  background: #000;
+  background: #fff;
   transform: translateY(-50%) rotate(45deg);
 }
 .hamburgerMenu1:hover span:nth-child(1):after {
   width: 100%;
   height: 7px;
   border: 0;
-  background: #000;
+  background: #fff;
   transform: translateY(-50%) rotate(-45deg);
 }
 .hamburgerMenu1:hover span:nth-child(2):before {
   width: 100%;
   height: 7px;
   border: 0;
-  background: #000;
+  background: #fff;
   transform: translateY(50%) rotate(-45deg);
   transform-origin: 0;
 }
@@ -79,7 +140,7 @@
   width: 100%;
   height: 7px;
   border: 0;
-  background: #000;
+  background: #fff;
   transform: translateY(50%) rotate(45deg);
   transform-origin: 100%;
 }
@@ -98,7 +159,7 @@
   transition: 0.3s ease all;
 }
 .hamburgerMenu2 .icon span {
-  background: #657084;
+  background: #fff;
 }
 .hamburgerMenu2 .icon span:nth-child(1):before {
   content: "";
@@ -165,6 +226,967 @@
 .hamburgerMenu2:hover .icon span:nth-child(2):after {
   transform: rotate(-90deg);
   border-top-left-radius: 0;
+}
+
+.hamburgerMenu3 {
+  position: relative;
+  display: flex;
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+}
+.hamburgerMenu3 span {
+  width: 100%;
+  height: 6px;
+  position: absolute;
+  background: #fff;
+  border-radius: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s ease all;
+}
+.hamburgerMenu3 span:nth-child(1) {
+  top: 0;
+}
+.hamburgerMenu3 span:nth-child(2) {
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.hamburgerMenu3 span:nth-child(3) {
+  top: 100%;
+  transform: translateX(-50%) translateY(-100%);
+}
+.hamburgerMenu3:hover span:nth-child(1) {
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  top: 50%;
+}
+.hamburgerMenu3:hover span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-100%) translateY(-50%);
+}
+.hamburgerMenu3:hover span:nth-child(3) {
+  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+  top: 50%;
+}
+
+.hamburgerMenu4 {
+  position: relative;
+  display: flex;
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+}
+.hamburgerMenu4 span {
+  width: 100%;
+  height: 6px;
+  position: absolute;
+  background: #fff;
+  border-radius: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s ease all;
+}
+.hamburgerMenu4 span:nth-child(1) {
+  top: 0;
+  animation: hamburgerMenu4-1-reverse 0.4s forwards;
+}
+.hamburgerMenu4 span:nth-child(2) {
+  transition: 0.3s ease all;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.hamburgerMenu4 span:nth-child(3) {
+  top: 100%;
+  transform: translateX(-50%) translateY(-100%);
+  animation: hamburgerMenu4-2-reverse 0.4s forwards;
+}
+.hamburgerMenu4:hover span {
+  transition: unset;
+}
+.hamburgerMenu4:hover span:nth-child(1) {
+  animation: hamburgerMenu4-1 0.4s forwards;
+}
+.hamburgerMenu4:hover span:nth-child(2) {
+  opacity: 0;
+  transition: 0.3s 0.2s ease opacity;
+}
+.hamburgerMenu4:hover span:nth-child(3) {
+  animation: hamburgerMenu4-2 0.4s forwards;
+}
+
+@keyframes hamburgerMenu4-1-reverse {
+  0% {
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    top: 50%;
+  }
+  30% {
+    transform: translateX(-50%) translateY(0%) rotate(0deg);
+    top: 50%;
+  }
+  100% {
+    transform: translateX(-50%) translateY(0%) rotate(0deg);
+    top: 0%;
+  }
+}
+@keyframes hamburgerMenu4-1 {
+  0% {
+    transform: translateX(-50%) translateY(0%) rotate(0deg);
+    top: 0%;
+  }
+  70% {
+    transform: translateX(-50%) translateY(0%) rotate(0deg);
+    top: 50%;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    top: 50%;
+  }
+}
+@keyframes hamburgerMenu4-2-reverse {
+  0% {
+    transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+    top: 50%;
+  }
+  30% {
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+  }
+  100% {
+    top: 100%;
+    transform: translateX(-50%) translateY(-100%);
+  }
+}
+@keyframes hamburgerMenu4-2 {
+  0% {
+    top: 100%;
+    transform: translateX(-50%) translateY(-100%);
+  }
+  70% {
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+    top: 50%;
+  }
+}
+.hamburgerMenu5 {
+  position: relative;
+  display: flex;
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+}
+.hamburgerMenu5 span {
+  width: 100%;
+  height: 6px;
+  position: absolute;
+  background: #fff;
+  border-radius: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s ease all;
+}
+.hamburgerMenu5 span:nth-child(1) {
+  top: 0;
+}
+.hamburgerMenu5 span:nth-child(2) {
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.hamburgerMenu5 span:nth-child(3) {
+  top: 100%;
+  transform: translateX(-50%) translateY(-100%);
+}
+.hamburgerMenu5:hover span:nth-child(1) {
+  width: 70%;
+  transform: translateX(0%) translateY(-50%) rotate(-40deg);
+  left: 0%;
+  top: 50%;
+  transform-origin: left bottom;
+}
+.hamburgerMenu5:hover span:nth-child(2) {
+  transform: translateX(-50%) translateY(-50%);
+}
+.hamburgerMenu5:hover span:nth-child(3) {
+  width: 70%;
+  transform: translateX(0%) translateY(-50%) rotate(40deg);
+  left: 0%;
+  top: 50%;
+  transform-origin: left top;
+}
+
+.hamburgerMenu6 {
+  position: relative;
+  display: flex;
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+  transform: rotate(180deg);
+  transition: 0.3s ease all;
+}
+.hamburgerMenu6 span {
+  width: 100%;
+  height: 6px;
+  position: absolute;
+  background: #fff;
+  border-radius: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s ease all;
+}
+.hamburgerMenu6 span:nth-child(1) {
+  top: 0;
+}
+.hamburgerMenu6 span:nth-child(2) {
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.hamburgerMenu6 span:nth-child(3) {
+  top: 100%;
+  transform: translateX(-50%) translateY(-100%);
+}
+.hamburgerMenu6:hover {
+  transform: rotate(0deg);
+}
+.hamburgerMenu6:hover span:nth-child(1) {
+  width: 70%;
+  transform: translateX(0%) translateY(-50%) rotate(-40deg);
+  left: 0%;
+  top: 50%;
+  transform-origin: left bottom;
+}
+.hamburgerMenu6:hover span:nth-child(2) {
+  transform: translateX(-50%) translateY(-50%);
+}
+.hamburgerMenu6:hover span:nth-child(3) {
+  width: 70%;
+  transform: translateX(0%) translateY(-50%) rotate(40deg);
+  left: 0%;
+  top: 50%;
+  transform-origin: left top;
+}
+
+.hamburgerMenu7 {
+  position: relative;
+  display: flex;
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+}
+.hamburgerMenu7 span {
+  width: 100%;
+  height: 6px;
+  position: absolute;
+  background: #fff;
+  border-radius: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s ease all;
+}
+.hamburgerMenu7 span:nth-child(1) {
+  top: 0;
+}
+.hamburgerMenu7 span:nth-child(2) {
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.hamburgerMenu7 span:nth-child(3) {
+  top: 100%;
+  transform: translateX(-50%) translateY(-100%);
+}
+.hamburgerMenu7:hover span:nth-child(1) {
+  opacity: 0;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+}
+.hamburgerMenu7:hover span:nth-child(2) {
+  transform: translateX(-50%) translateY(-50%);
+}
+.hamburgerMenu7:hover span:nth-child(3) {
+  opacity: 0;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+}
+
+.hamburgerMenu8 {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  transition: 0.1s;
+  margin: 10px 10px;
+  cursor: pointer;
+  display: block;
+}
+.hamburgerMenu8 span {
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+}
+.hamburgerMenu8 span:nth-child(1) {
+  left: 0;
+  top: 0;
+}
+.hamburgerMenu8 span:nth-child(2) {
+  left: 12px;
+  top: 0;
+}
+.hamburgerMenu8 span:nth-child(3) {
+  right: 0;
+  top: 0;
+}
+.hamburgerMenu8 span:nth-child(4) {
+  left: 0;
+  top: 12px;
+}
+.hamburgerMenu8 span:nth-child(5) {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+}
+.hamburgerMenu8 span:nth-child(6) {
+  right: 0px;
+  top: 12px;
+}
+.hamburgerMenu8 span:nth-child(7) {
+  left: 0px;
+  bottom: 0px;
+}
+.hamburgerMenu8 span:nth-child(8) {
+  position: absolute;
+  left: 12px;
+  bottom: 0px;
+}
+.hamburgerMenu8 span:nth-child(9) {
+  right: 0px;
+  bottom: 0px;
+}
+.hamburgerMenu8:hover {
+  transform: rotate(180deg);
+  cursor: pointer;
+  transition: 0.2s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+}
+.hamburgerMenu8:hover span {
+  border-radius: 50%;
+  transition-delay: 200ms;
+  transition: 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+}
+.hamburgerMenu8:hover span:nth-child(2) {
+  left: 6px;
+  top: 6px;
+}
+.hamburgerMenu8:hover span:nth-child(4) {
+  left: 6px;
+  top: 18px;
+}
+.hamburgerMenu8:hover span:nth-child(6) {
+  right: 6px;
+  top: 6px;
+}
+.hamburgerMenu8:hover span:nth-child(8) {
+  left: 18px;
+  bottom: 6px;
+}
+
+.hamburgerMenu9 {
+  width: 35px;
+  height: 30px;
+  margin: 10px 10px;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+.hamburgerMenu9 span {
+  background-color: #FFF;
+  position: absolute;
+  border-radius: 2px;
+  transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+}
+.hamburgerMenu9 span:nth-child(1) {
+  width: 100%;
+  height: 4px;
+  display: block;
+  top: 0px;
+  left: 0px;
+}
+.hamburgerMenu9 span:nth-child(2) {
+  width: 100%;
+  height: 4px;
+  display: block;
+  top: 13px;
+  left: 0px;
+}
+.hamburgerMenu9 span:nth-child(3) {
+  width: 100%;
+  height: 4px;
+  display: block;
+  bottom: 0px;
+  left: 0px;
+}
+.hamburgerMenu9:hover span:nth-child(1) {
+  left: 3px;
+  top: 12px;
+  width: 30px;
+  transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  transform: rotate(90deg);
+  transition-delay: 150ms;
+}
+.hamburgerMenu9:hover span:nth-child(2) {
+  left: 2px;
+  top: 20px;
+  width: 20px;
+  transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  transform: rotate(45deg);
+  transition-delay: 50ms;
+}
+.hamburgerMenu9:hover span:nth-child(3) {
+  left: 14px;
+  top: 20px;
+  width: 20px;
+  transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  transform: rotate(-45deg);
+  transition-delay: 100ms;
+}
+
+.hamburgerMenu10 {
+  width: 35px;
+  height: 30px;
+  margin: 10px 10px;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+.hamburgerMenu10 span {
+  background-color: #fff;
+  position: absolute;
+  border-radius: 2px;
+  transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  width: 100%;
+  height: 4px;
+  transition-duration: 500ms;
+}
+.hamburgerMenu10 span:nth-child(1) {
+  top: 0px;
+  left: 0px;
+}
+.hamburgerMenu10 span:nth-child(2) {
+  top: 13px;
+  left: 0px;
+  opacity: 1;
+}
+.hamburgerMenu10 span:nth-child(3) {
+  bottom: 0px;
+  left: 0px;
+}
+.hamburgerMenu10:hover span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 13px;
+}
+.hamburgerMenu10:hover span:nth-child(2) {
+  opacity: 0;
+}
+.hamburgerMenu10:hover span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 13px;
+}
+
+.hamburgerMenu11 {
+  width: 35px;
+  height: 30px;
+  margin: 10px 10px;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+.hamburgerMenu11 span {
+  background-color: #fff;
+  position: absolute;
+  border-radius: 2px;
+  transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  width: 100%;
+  height: 4px;
+}
+.hamburgerMenu11 span:nth-child(1) {
+  top: 0px;
+  left: 0px;
+}
+.hamburgerMenu11 span:nth-child(2) {
+  top: 13px;
+  left: 0px;
+}
+.hamburgerMenu11 span:nth-child(3) {
+  bottom: 0px;
+  left: 0px;
+}
+.hamburgerMenu11:hover span:nth-child(1) {
+  transform: rotate(45deg) scaleX(0.7);
+  top: 13px;
+  left: -8px;
+}
+.hamburgerMenu11:hover span:nth-child(2) {
+  transform: scale(0);
+  transition-duration: 50ms;
+}
+.hamburgerMenu11:hover span:nth-child(3) {
+  transform: rotate(-45deg) scaleX(0.7);
+  top: 13px;
+  left: 7px;
+}
+
+.hamburgerMenu12 {
+  height: 28px;
+  width: 36px;
+  position: relative;
+}
+.hamburgerMenu12 span {
+  position: absolute;
+  display: block;
+  height: 4px;
+  width: 36px;
+  border-radius: 2px;
+  background: #fff;
+}
+.hamburgerMenu12 span:nth-child(1) {
+  top: 0;
+  transform-origin: 34px 2px;
+  animation: bun-top-in 0.6s linear normal;
+  animation-fill-mode: forwards;
+}
+.hamburgerMenu12 span:nth-child(2) {
+  top: 12px;
+  animation: burger-fill-in 0.6s linear normal;
+  animation-fill-mode: forwards;
+}
+.hamburgerMenu12 span:nth-child(3) {
+  bottom: 0;
+  transform-origin: 34px 2px;
+  animation: bun-bot-in 0.6s linear normal;
+  animation-fill-mode: forwards;
+}
+.hamburgerMenu12:hover span:nth-child(1) {
+  animation: bun-top-out 0.6s linear normal;
+  animation-fill-mode: forwards;
+}
+.hamburgerMenu12:hover span:nth-child(2) {
+  animation: burger-fill-out 0.6s linear normal;
+  animation-fill-mode: forwards;
+}
+.hamburgerMenu12:hover span:nth-child(3) {
+  animation: bun-bot-out 0.6s linear normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes bun-top-out {
+  0% {
+    left: 0;
+    top: 0;
+    transform: rotate(0deg);
+  }
+  20% {
+    left: 0;
+    top: 0;
+    transform: rotate(15deg);
+  }
+  80% {
+    left: -5px;
+    top: 0;
+    transform: rotate(-60deg);
+  }
+  100% {
+    left: -5px;
+    top: 1px;
+    transform: rotate(-45deg);
+  }
+}
+@keyframes bun-bot-out {
+  0% {
+    left: 0;
+    transform: rotate(0deg);
+  }
+  20% {
+    left: 0;
+    transform: rotate(-15deg);
+  }
+  80% {
+    left: -5px;
+    transform: rotate(60deg);
+  }
+  100% {
+    left: -5px;
+    transform: rotate(45deg);
+  }
+}
+@keyframes bun-top-in {
+  0% {
+    left: -5px;
+    bot: 0;
+    transform: rotate(-45deg);
+  }
+  20% {
+    left: -5px;
+    bot: 0;
+    transform: rotate(-60deg);
+  }
+  80% {
+    left: 0;
+    bot: 0;
+    transform: rotate(15deg);
+  }
+  100% {
+    left: 0;
+    bot: 1px;
+    transform: rotate(0deg);
+  }
+}
+@keyframes bun-bot-in {
+  0% {
+    left: -5px;
+    transform: rotate(45deg);
+  }
+  20% {
+    left: -5px;
+    bot: 0;
+    transform: rotate(60deg);
+  }
+  80% {
+    left: 0;
+    bot: 0;
+    transform: rotate(-15deg);
+  }
+  100% {
+    left: 0;
+    transform: rotate(0deg);
+  }
+}
+@keyframes burger-fill-in {
+  0% {
+    width: 0;
+    left: 36px;
+  }
+  40% {
+    width: 0;
+    left: 40px;
+  }
+  80% {
+    width: 36px;
+    left: -6px;
+  }
+  100% {
+    width: 36px;
+    left: 0px;
+  }
+}
+@keyframes burger-fill-out {
+  0% {
+    width: 36px;
+    left: 0px;
+  }
+  20% {
+    width: 42px;
+    left: -6px;
+  }
+  40% {
+    width: 0;
+    left: 40px;
+  }
+  100% {
+    width: 0;
+    left: 36px;
+  }
+}
+.hamburgerMenu13 {
+  width: 35px;
+  height: 30px;
+  margin: 10px 10px;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+.hamburgerMenu13 span {
+  background-color: #FFF;
+  position: absolute;
+  border-radius: 2px;
+  transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  width: 100%;
+  height: 4px;
+}
+.hamburgerMenu13 span:nth-child(1) {
+  top: 0px;
+  left: 0px;
+}
+.hamburgerMenu13 span:nth-child(2) {
+  top: 13px;
+  left: 0px;
+}
+.hamburgerMenu13 span:nth-child(3) {
+  bottom: 0px;
+  left: 0px;
+}
+.hamburgerMenu13:hover span:nth-child(1) {
+  transform: rotate(90deg);
+  top: 13px;
+}
+.hamburgerMenu13:hover span:nth-child(2) {
+  transform: scale(0);
+  transition-duration: 50ms;
+}
+.hamburgerMenu13:hover span:nth-child(3) {
+  top: 13px;
+}
+
+.hamburgerMenu14 {
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.hamburgerMenu14 span {
+  width: 50px;
+  height: 5px;
+  background-color: #ecf0f1;
+  display: block;
+  margin: 8px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.hamburgerMenu14:hover {
+  animation: smallbig 0.6s forwards;
+}
+.hamburgerMenu14:hover span {
+  -webkit-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+.hamburgerMenu14:hover span:nth-child(1) {
+  -webkit-transform: translateY(13px) rotate(45deg);
+  -ms-transform: translateY(13px) rotate(45deg);
+  -o-transform: translateY(13px) rotate(45deg);
+  transform: translateY(13px) rotate(45deg);
+}
+.hamburgerMenu14:hover span:nth-child(2) {
+  opacity: 0;
+}
+.hamburgerMenu14:hover span:nth-child(3) {
+  -webkit-transform: translateY(-13px) rotate(-45deg);
+  -ms-transform: translateY(-13px) rotate(-45deg);
+  -o-transform: translateY(-13px) rotate(-45deg);
+  transform: translateY(-13px) rotate(-45deg);
+}
+
+@keyframes smallbig {
+  0%, 100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+  }
+}
+.hamburgerMenu15 {
+  display: flex;
+  flex-direction: column;
+  width: 70px;
+  cursor: pointer;
+}
+.hamburgerMenu15 span {
+  background: #fff;
+  border-radius: 10px;
+  height: 7px;
+  margin: 7px 0;
+  transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+.hamburgerMenu15 span:nth-child(1) {
+  width: 50%;
+}
+.hamburgerMenu15 span:nth-child(2) {
+  width: 100%;
+}
+.hamburgerMenu15 span:nth-child(3) {
+  width: 75%;
+}
+.hamburgerMenu15:hover span:nth-child(1) {
+  transform-origin: bottom;
+  transform: rotatez(45deg) translate(8px, 0px);
+}
+.hamburgerMenu15:hover span:nth-child(2) {
+  transform-origin: top;
+  transform: rotatez(-45deg);
+}
+.hamburgerMenu15:hover span:nth-child(3) {
+  transform-origin: bottom;
+  width: 50%;
+  transform: translate(30px, -11px) rotatez(45deg);
+}
+
+.hamburgerMenu16 {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  transition: 0.3s ease transform;
+  cursor: pointer;
+  display: flex;
+}
+.hamburgerMenu16 span {
+  height: 6px;
+  background: #fff;
+  position: absolute;
+  border-radius: 8px;
+  left: 0%;
+  transition: 0.3s ease all;
+}
+.hamburgerMenu16 span:nth-child(1) {
+  top: 0;
+  width: 70%;
+  transform: translateY(0%) translateX(0%);
+}
+.hamburgerMenu16 span:nth-child(2) {
+  top: 50%;
+  width: 50%;
+  transform: translateY(-50%) translateX(0%);
+}
+.hamburgerMenu16 span:nth-child(3) {
+  top: 100%;
+  width: 100%;
+  transform: translateY(-100%) translateX(0%);
+}
+.hamburgerMenu16:hover {
+  transform: rotateZ(-90deg);
+}
+.hamburgerMenu16:hover span {
+  width: 6px;
+  height: 6px;
+  background: #000;
+  left: 50%;
+}
+.hamburgerMenu16:hover span:nth-child(1) {
+  transform: translateY(0%) translateX(-50%);
+}
+.hamburgerMenu16:hover span:nth-child(2) {
+  transform: translateY(-50%) translateX(-50%);
+}
+.hamburgerMenu16:hover span:nth-child(3) {
+  transform: translateY(-100%) translateX(-50%);
+}
+
+.hamburgerMenu17 {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  transition: 0.3s ease transform;
+  cursor: pointer;
+  display: flex;
+}
+.hamburgerMenu17 span {
+  height: 6px;
+  background: #fff;
+  position: absolute;
+  border-radius: 8px;
+  left: 0%;
+  transition: 0.3s ease all;
+}
+.hamburgerMenu17 span:nth-child(1) {
+  top: 0;
+  width: 70%;
+  transform: translateY(0%) translateX(0%);
+}
+.hamburgerMenu17 span:nth-child(2) {
+  top: 50%;
+  width: 50%;
+  transform: translateY(-50%) translateX(0%);
+}
+.hamburgerMenu17 span:nth-child(3) {
+  top: 100%;
+  width: 100%;
+  transform: translateY(-100%) translateX(0%);
+}
+.hamburgerMenu17:hover {
+  transform: rotateZ(-90deg);
+  transition: 0.3s 0.3s ease all;
+}
+.hamburgerMenu17:hover span {
+  width: 8px;
+  height: 8px;
+  left: 50%;
+}
+.hamburgerMenu17:hover span:nth-child(1) {
+  transform: translateY(0%) translateX(-50%);
+}
+.hamburgerMenu17:hover span:nth-child(2) {
+  transform: translateY(-50%) translateX(-50%);
+}
+.hamburgerMenu17:hover span:nth-child(3) {
+  transform: translateY(-100%) translateX(-50%);
+}
+
+.hamburgerMenu18 {
+  --front: #3f51b5;
+  --back: #f44336;
+  --icon: white;
+  perspective: 600px;
+  width: 48px;
+  height: 48px;
+  position: relative;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.hamburgerMenu18 span {
+  --rotateY: 0deg;
+  --background: var(--front);
+  transform: rotateY(var(--rotateY));
+  transform-style: preserve-3d;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--background);
+  backface-visibility: hidden;
+  transition: transform 0.6s cubic-bezier(0.2, 0.64, 0.48, 1.24);
+}
+.hamburgerMenu18 span:before, .hamburgerMenu18 span:after {
+  --rotate: 0deg;
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  border-radius: 1px;
+  top: 50%;
+  left: 50%;
+  background: var(--icon);
+  backface-visibility: hidden;
+  transform: translate(-50%, -50%) rotate(var(--rotate)) translateZ(6px);
+}
+.hamburgerMenu18 span:nth-child(1) {
+  --background: var(--back);
+  --rotateY: 180deg;
+}
+.hamburgerMenu18 span:nth-child(1):before {
+  --rotate: -45deg;
+}
+.hamburgerMenu18 span:nth-child(1):after {
+  --rotate: 45deg;
+}
+.hamburgerMenu18 span:nth-child(2):before {
+  box-shadow: 0 -5px 0 var(--icon), 0 5px 0 var(--icon);
+}
+.hamburgerMenu18 span:nth-child(2):after {
+  display: none;
+}
+.hamburgerMenu18:hover span:nth-child(1) {
+  --rotateY: 0deg;
+}
+.hamburgerMenu18:hover span:nth-child(2) {
+  --rotateY: -180deg;
 }
 
 /*# sourceMappingURL=style.css.map */
