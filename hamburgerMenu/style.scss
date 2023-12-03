@@ -890,12 +890,12 @@ $tray-colors: (
 }
 
 .hamburgerMenu11 {
-  width: 35px;
-  height: 30px;
-  margin: 10px 10px;
+  width: 50px;
+  height: 50px;
+
   position: relative;
   cursor: pointer;
-  display: inline-block;
+  display: flex;
 
   span {
     background-color: #fff;
@@ -906,27 +906,33 @@ $tray-colors: (
     height: 4px;
 
     &:nth-child(1) {
-      top: 0px;
+      top: 0%;
       left: 0px;
+      transform: translateY(0%);
     }
 
     &:nth-child(2) {
-      top: 13px;
+      top: 50%;
       left: 0px;
+      transform: translateY(-50%);
+
     }
 
     &:nth-child(3) {
-      bottom: 0px;
+      top: 100%;
       left: 0px;
+      transform: translateY(-100%);
+
     }
   }
 
   &:hover {
     span {
       &:nth-child(1) {
-        transform: rotate(45deg) scaleX(0.7);
-        top: 13px;
-        left: -8px;
+        transform: translateY(-50%) rotate(45deg) scaleX(0.75);
+        top: 30%;
+        left: 0;
+        transform-origin: left top;
       }
 
       &:nth-child(2) {
@@ -935,9 +941,10 @@ $tray-colors: (
       }
 
       &:nth-child(3) {
-        transform: rotate(-45deg) scaleX(0.7);
-        top: 13px;
-        left: 7px;
+        transform: translateY(-50%) rotate(-45deg) scaleX(0.75);
+        top: 30%;
+        left: 0;
+        transform-origin: right top;
       }
     }
   }
