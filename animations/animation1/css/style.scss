@@ -1,0 +1,81 @@
+
+html{
+  scroll-behavior: smooth;
+}
+body {
+
+
+  background: #000;
+}
+
+.otherContent {
+
+  padding: 100px 0;
+
+  img {
+    filter: blur(20px);
+    opacity: 0.2;
+    width: 100%;
+  }
+
+}
+
+.fakeWrapper {
+  width: 100%;
+
+  position: relative;
+height: 300vh;
+  .svgWrapper {
+    top: 0;
+
+    position: sticky;
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .svg-container {
+
+
+    width: 100%;
+
+    background: url(../img/bg2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    svg {
+      .line {
+        fill-opacity: 0;
+        stroke-width: 6;
+        stroke-linecap: round;
+        stroke-miterlimit: 8;
+
+        &.line1 {
+          stroke: #076EFF;
+        }
+
+        &.line2 {
+          stroke: #4FABFF;
+        }
+
+        &.line3 {
+          stroke: #B1C5FF;
+        }
+
+        &.line4 {
+          stroke: #FFB7C5;
+        }
+
+        &.line5 {
+          stroke: #FFDDB7;
+        }
+      }
+
+    }
+  }
+}
+
