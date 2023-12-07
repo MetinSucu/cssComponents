@@ -9,3 +9,7 @@
 ## Hamburger Menu Demo
 
 [Demo Link](https://metinsucu.github.io/cssComponents/hamburgerMenu/index.html)
+
+## Animation
+
+[Demo Link](https://metinsucu.github.io/cssComponents/animations/index.html)
