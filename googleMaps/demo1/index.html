@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="../../reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Multiple Map Marker</title>
+
+</head>
+<body>
+<div class="mapsContainer">
+    <div class="mapCard">
+        <div  class="map" data-maplat="37.8719" data-maplong="32.4845">
+        </div>
+    </div>
+    <div class="mapCard">
+        <div  class="map" data-maplat="37.8758" data-maplong="32.4825">
+        </div>
+    </div>
+    <div class="mapCard">
+        <div  class="map" data-maplat="37.8685" data-maplong="32.4844">
+        </div>
+    </div>
+    <div class="mapCard">
+        <div  class="map" data-maplat="37.8736" data-maplong="32.4923">
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="jquery-3.6.1.min.js"></script>
+<script src="script.js"></script>
+</html>
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBd_NRU7IXoiwbaxdQsj273beLBXhaMbZk&callback=initMap"></script>
+

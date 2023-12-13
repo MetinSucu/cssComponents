@@ -1,0 +1,26 @@
+body {
+  background: #F1F6FC;
+  padding: 50px;
+}
+
+.mapsContainer {
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  .mapCard {
+
+
+
+    border: 1px solid #ebebeb;
+    padding: 30px;
+    border-radius: 12px;
+    background: #fff;
+
+    .map {
+      height: 50vh;
+      min-height: 300px;
+      border-radius: 8px;
+    }
+  }
+}
