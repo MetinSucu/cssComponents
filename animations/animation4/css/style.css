@@ -1,0 +1,105 @@
+html {
+  scroll-behavior: smooth;
+  --power: linear(
+                  0 0%, 0.2688 9.91%, 0.3859 15%,
+                  0.4917 20.19%, 0.5865 25.5%,
+                  0.6705 30.93%, 0.7441 36.51%,
+                  0.8075 42.26%, 0.8593 47.98%,
+                  0.9022 53.93%, 0.9366 60.13%,
+                  0.963 66.67%, 0.9812 73.4%,
+                  0.9929 80.76%, 0.9986 88.89%, 1 100%
+  );
+}
+
+* {
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background: #fff;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.layers {
+  aspect-ratio: 2/1;
+  background: gray;
+  position: relative;
+  height: 200px;
+  border-radius: 8px;
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, 100vmin) rotateX(0deg) rotateY(0deg) rotateX(0deg);
+  transition: transform 1s 1s ease;
+}
+.layers * {
+  transform-style: preserve-3d;
+}
+.layers .layer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  translate: 0 0 0;
+  transition: translate 1s var(--power);
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+}
+.layers .layer:nth-child(1) {
+  background: red;
+  z-index: 1;
+}
+.layers .layer:nth-child(2) {
+  background: green;
+  z-index: 2;
+}
+.layers .layer:nth-child(3) {
+  background: blue;
+  z-index: 3;
+}
+.layers:hover {
+  --tx: 0.5;
+  --ty: -0.5;
+  --x1: -20;
+  --y1: 35;
+  --x2: 30;
+  --step: 1;
+  transform: translate3d(0, 0, 100vmin) rotateX(calc(var(--x1, 340) * 1deg)) rotateY(calc(var(--y1, 30) * 1deg)) rotateX(calc(var(--x2, 40) * 1deg));
+  transition: transform 1s ease;
+}
+.layers:hover .layer {
+  transition: 1s ease translate;
+  translate: calc(var(--tx, 0.5) * 1rem) calc(var(--ty, -0.5) * 1rem) calc(var(--step, 4) * 1rem);
+}
+.layers:hover .layer:nth-child(1) {
+  --tx: 1;
+  --ty: -1;
+}
+.layers:hover .layer:nth-child(1):hover {
+  --tx: -1;
+}
+.layers:hover .layer:nth-child(2) {
+  --tx: 3;
+  --ty: -3;
+}
+.layers:hover .layer:nth-child(2):hover {
+  --tx: 1;
+}
+.layers:hover .layer:nth-child(3) {
+  --tx: 5;
+  --ty: -5;
+}
+
+/*# sourceMappingURL=style.css.map */

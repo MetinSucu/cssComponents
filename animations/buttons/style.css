@@ -1,0 +1,155 @@
+.elements {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.elements .item {
+  position: relative;
+  width: 20%;
+  aspect-ratio: 3/2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #2196f3;
+}
+.elements .item:nth-child(1) {
+  background-color: #2196f3;
+}
+.elements .item:nth-child(2) {
+  background-color: #4a148c;
+}
+.elements .item:nth-child(3) {
+  background-color: #4db6ac;
+}
+.elements .item:nth-child(4) {
+  background-color: #ff5722;
+}
+.elements .item:nth-child(5) {
+  background-color: #444;
+}
+.elements .item:nth-child(6) {
+  background-color: #ec407a;
+}
+.elements .item:nth-child(7) {
+  background-color: #fbc02d;
+}
+.elements .item:nth-child(8) {
+  background-color: #2196f3;
+}
+.elements .item:nth-child(9) {
+  background-color: #607d8b;
+}
+.elements .item:nth-child(10) {
+  background-color: #43a047;
+}
+.elements .item:nth-child(11) {
+  background-color: #3f51b5;
+}
+.elements .item:nth-child(12) {
+  background-color: #00bcd4;
+}
+.elements .item:nth-child(13) {
+  background-color: #f44336;
+}
+.elements .item:nth-child(14) {
+  background-color: #9c27b0;
+}
+.elements .item:nth-child(15) {
+  background-color: #795548;
+}
+.elements .item:nth-child(16) {
+  background-color: #ffc107;
+}
+.elements .item:nth-child(17) {
+  background-color: #03a9f4;
+}
+.elements .item:nth-child(18) {
+  background-color: #2196f3;
+}
+.elements .item:nth-child(19) {
+  background-color: #4db6ac;
+}
+.elements .item:nth-child(20) {
+  background-color: #ff5722;
+}
+.elements .item:nth-child(21) {
+  background-color: #444;
+}
+.elements .item:nth-child(22) {
+  background-color: #ec407a;
+}
+.elements .item:nth-child(23) {
+  background-color: #fbc02d;
+}
+.elements .item:nth-child(24) {
+  background-color: #2196f3;
+}
+.elements .item:nth-child(25) {
+  background-color: #607d8b;
+}
+.elements .item:nth-child(26) {
+  background-color: #43a047;
+}
+.elements .item:nth-child(27) {
+  background-color: #3f51b5;
+}
+.elements .item:nth-child(28) {
+  background-color: #00bcd4;
+}
+.elements .item:nth-child(29) {
+  background-color: #3f51b5;
+}
+.elements .item:nth-child(30) {
+  background-color: #00bcd4;
+}
+
+.button1 {
+  position: relative;
+  z-index: 20;
+  overflow: hidden;
+  border-radius: 6px;
+  border: 0;
+  background: #fff;
+  padding: 2px;
+  cursor: pointer;
+  transition: 0.3s ease all;
+}
+.button1 .text {
+  background: #fff;
+  transition: 0.3s ease all;
+  padding: 10px 30px;
+  border-radius: 6px;
+  text-align: center;
+  position: relative;
+  display: block;
+}
+.button1 .border {
+  width: 100px;
+  aspect-ratio: 2/1;
+  position: absolute;
+  background: radial-gradient(100% 100% at right, #000000, transparent 75%);
+  offset-path: border-box;
+  offset-anchor: 100% 50%;
+  animation: journey var(--speed, 6s) infinite linear;
+}
+.button1:hover {
+  background: #000;
+}
+.button1:hover .border {
+  background: radial-gradient(100% 100% at right, #fff, transparent 75%);
+}
+.button1:hover .text {
+  color: #fff;
+  background: #000;
+}
+
+@keyframes journey {
+  to {
+    offset-distance: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,72 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background: #fff;
+}
+
+header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 30px;
+  z-index: 2;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+}
+header .logo svg {
+  width: 100px;
+}
+header .logo svg path {
+  fill: #000;
+  transition: 0.3s ease all;
+}
+header ul {
+  display: flex;
+  gap: 20px;
+}
+header ul li a {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  transition: 0.3s ease all;
+  text-decoration: unset !important;
+}
+header.whiteHeader .logo svg path {
+  fill: #fff;
+}
+header.whiteHeader ul li a {
+  color: #fff;
+}
+
+section.whiteSection {
+  height: 500px;
+  background: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+section.darkSection {
+  height: 500px;
+  background: #000;
+  position: relative;
+  z-index: 1;
+}
+
+section.coloredSection {
+  height: 500px;
+  background: #56a0de;
+  position: relative;
+  z-index: 1;
+}
+
+/*# sourceMappingURL=style.css.map */

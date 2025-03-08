@@ -1,0 +1,33 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #000;
+}
+
+.otherContent {
+  padding: 100px 0;
+}
+.otherContent img {
+  filter: blur(10px);
+  opacity: 0.5;
+  width: 100%;
+}
+
+.videoArea {
+  width: 100%;
+  position: fixed;
+  z-index: 10204124;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.videoArea video {
+  width: 100%;
+  height: 100vh;
+  object-fit: contain;
+  object-position: center;
+}
+
+/*# sourceMappingURL=style.css.map */
